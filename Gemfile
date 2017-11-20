@@ -16,6 +16,11 @@ gem 'puma', '~> 3.7'
 # Add Ancestry for tree menus
 gem 'ancestry'
 
+#add gem addressfinder
+gem 'addressfinder'
+
+#Bootsrap support
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

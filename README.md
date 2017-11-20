@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Proof of concept for a GNAF-PID Address locator to resolve adresses between NBN, Telstra and other carriers.  Will form the basis of the Data network quoting qualification tool.
 
-Things you may want to cover:
+Note: requires a database with the full GNAF PID created and loaded
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+see the excellent gnaf-loader for info on how to set this up (with POstGIS)
