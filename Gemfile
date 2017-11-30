@@ -22,6 +22,9 @@ gem 'addressfinder'
 #Bootsrap support
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
+#require turbolinks
+gem 'turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production

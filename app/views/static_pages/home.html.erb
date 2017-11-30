@@ -1,2 +1,57 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class = "center jumbotron">
+	<h1>Welcome to Brennan IT API  (BitterAPI)</h1>
+
+<h2>
+	This is the homepage for the Brennan API / BitterAPI
+	For detailed instructions - click the Help Icon.
+</h2>
+
+
+
+<div class="address_wrapper">
+  <label for="address_widget_1_field">First Address</label>
+  <input type="text" id="address_widget_1_field">
+</div>
+<div class="address_wrapper">
+  <label for="address_widget_2_field">Second Address</label>
+  <input type="text" id="address_widget_2_field">
+</div>
+
+<script>
+(function(){
+  var address_widget_1, address_widget_2, 
+      initAF = function() {
+      /* Create the Auckland Widget */
+      address_widget_1 = new AddressFinder.Widget(
+          document.getElementById("address_widget_1_field"),
+          "3R4UED89YCLFHAGN6VJK",
+          'AU'
+      );
+
+      /* Create the Wellington Widget */
+      address_widget_2 = new AddressFinder.Widget(
+          document.getElementById("address_widget_2_field"),
+          "3R4UED89YCLFHAGN6VJK", 
+          'AU'
+      );
+
+      /* Set the options for each widget */
+      address_widget_1.on("result:select", function(value, data){alert(data.locality_name + " is a great place")});
+
+      address_widget_2.on("result:select", function(value, data){alert("I love " + data.locality_name)});
+  };
+
+  function downloadAF(f){
+    var script = document.createElement('script');
+    script.src = 'https://api.addressfinder.io/assets/v3/widget.js';
+    script.async = true;
+    script.onload=f;
+    document.body.appendChild(script);
+  };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    downloadAF(initAF);
+  });
+
+})();
+</script>

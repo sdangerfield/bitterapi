@@ -1,0 +1,2 @@
+class ProductFamiliesController < ApplicationController
+end
